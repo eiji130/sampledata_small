@@ -14,11 +14,11 @@ RandomTimeStamp <- function(M,
 }
 
 # 全行数
-N <- 1000000
+N <- 100000
 # 人数
-M <- 100000
+M <- 10000
 # 商品数
-P <- 10000
+P <- 1000
 
 # 商品マスタデータ
 ProductID <- c(1:P)
@@ -41,8 +41,6 @@ write.csv(product,
           "./csv/Products_cp932.csv",
           row.names = FALSE,
           fileEncoding = "CP932")
-write_tsv(product, "./tsv/Products.tsv")
-openxlsx::write.xlsx(product, file = "./xlsx/Products.xlsx")
 
 # 購買ログ
 UserID <- stringi::stri_rand_strings(n = M, length = 20)
@@ -57,8 +55,6 @@ sales <- data.frame(
 )
 
 write_csv(sales, "./csv/Sales.csv")
-write_tsv(sales, "./tsv/Sales.tsv")
-openxlsx::write.xlsx(sales, file = "./xlsx/Sales.xlsx")
 
 # ユーザーの属性情報
 ages <- c(18:65)

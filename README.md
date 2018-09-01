@@ -14,3 +14,7 @@
     - Price: 価格
     - Category: 商品ジャンル
     - CreatedDate: 商品が作られた年月日
+    
+## より大きいのは
+- https://github.com/ymattu/SampleData
+- こっちはもっといろんなタイプ(tsv, xlsxなど)もある
